@@ -39,7 +39,7 @@ class ProductFinder:
         self.__redis_repo.insert_ex(product_name, value, ex=60)
 
     def __format_response(self, product:tuple)->HttpResponse:
-        return HttpResponse(body= {"type": 'PRODUCT', 'count': 1, "attributes":{"name":product[1], "price":product[2], "quantity":product[3] }},status_code=200, )
+        return HttpResponse(body= {"type": 'PRODUCT', 'count': 1, "attributes":{"name":product[1], "price":product[2], "quantity":product[3] }},status_code=200)
 
 
 
