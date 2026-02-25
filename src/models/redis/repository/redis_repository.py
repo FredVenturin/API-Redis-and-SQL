@@ -17,7 +17,7 @@ class RedisRepository(RedisRepositoryInterface):
     def insert_hash(self, key: str, field:str, value: any)->None:
         self.__redis_conn.hset(key,field, value)
 
-    def get_key(self, key:str, field:str)->any:
+    def get_hash(self, key: str, field: str) -> str:
         value = self.__redis_conn.hget(key, field)
         if value:
             return value.decode("utf-8")

@@ -1,4 +1,4 @@
 class HttpRequest:
     def __init__(self, body:dict=None, params:dict=None):
         self.body = body
-        self.param = params
+        self.params = params
